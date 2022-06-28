@@ -1,0 +1,21 @@
+[
+  {
+    "name" : "${container_name}",
+    "image" : "705144275434.dkr.ecr.ap-south-1.amazonaws.com/${ecr_repo_name}:latest",
+    "cpu" : ${cpu},    
+    "memory" : ${memory},    
+    "portMappings": [
+      {
+        "protocol" : "tcp",
+        "containerPort" : ${container_port},
+        "hostPort" : ${container_port}
+      }
+    ],
+    "environment": [
+            {
+                "name": "${env_name1}",
+                "value": "${env_value1}"
+            }
+        ]
+   }
+]
