@@ -13,7 +13,7 @@ resource "aws_iam_role" "fargate_role" {
         "Service": "ecs-tasks.amazonaws.com"
       },
       "Effect": "Allow",
-      "Sid": "ecsfarexecutionrole",
+      "Sid": "",
       "Resource": "*"
     }
   ]
