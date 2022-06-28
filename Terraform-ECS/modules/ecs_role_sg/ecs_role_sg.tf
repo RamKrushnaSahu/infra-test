@@ -8,7 +8,7 @@ resource "aws_iam_role" "fargate_role" {
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Action": "sts:AssumeRole",
+      "Action": "iam:CreateRole",
       "Principal": {
         "AWS": "arn:aws:iam::705144275434:user/Devops"
       },
