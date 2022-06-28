@@ -9,6 +9,9 @@ resource "aws_iam_role" "fargate_role" {
   "Statement": [
     {
       "Action": "*",
+      "Principal": {
+        "Service": "ecs-tasks.amazonaws.com"
+      },
       "Effect": "Allow",
       "Sid": "ecsfarexecutionrole",
       "Resource": "*"
