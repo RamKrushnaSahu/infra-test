@@ -10,7 +10,7 @@ resource "aws_iam_role" "fargate_role" {
     {
       "Action": "sts:AssumeRole",
       "Principal": {
-        "Service": "ecs-tasks.amazonaws.com"
+        "AWS": "arn:aws:iam::705144275434:user/Devops"
       },
       "Effect": "Allow",
       "Sid": "ecsfarexecutionrole"
