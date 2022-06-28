@@ -45,7 +45,7 @@ jobs:
       - run:
           name: Step4-AWS Infra Creation:ECS & ECR
           command: |
-            cd Terraform-ECS 
+            cd ~/circleci-aws-infra-workspace/Terraform-ECS 
             terraform init
             terraform apply -auto-approve
             echo 'Infrastructure is Created in AWS'
