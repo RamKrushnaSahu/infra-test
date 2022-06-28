@@ -18,6 +18,7 @@ jobs:
           command: |
             echo 'Welcome to Terraform !!'
             terraform --version
+            pwd
       - checkout
       - run:
           name: Step2-Fetching the Code from Github
@@ -31,6 +32,7 @@ jobs:
             cd Terraform-ECS/environments/staging
             terraform init
             terraform plan
+            pwd
       - persist_to_workspace:
           root: *working_directory
           paths:
