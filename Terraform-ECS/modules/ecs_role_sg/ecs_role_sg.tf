@@ -8,13 +8,12 @@ resource "aws_iam_role" "fargate_role" {
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Action": "*",
+      "Action": "sts:AssumeRole",
       "Principal": {
         "Service": "ecs-tasks.amazonaws.com"
       },
       "Effect": "Allow",
-      "Sid": "",
-      "Resource": "*"
+      "Sid": "ecsfarexecutionrole"
     }
   ]
 }
